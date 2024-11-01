@@ -1,0 +1,87 @@
+.sidebar {
+    min-height: 100vh;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #2b2b2b; /* Lightly visible dark background */
+    padding: 25px 15px;
+    color: #e0e0e0; /* Light text color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
+}
+
+.sidebar img {
+    width: 20px;
+}
+
+.sidebar .menu {
+    display: block;
+    margin-left: 10px;
+    cursor: pointer;
+    color: #e0e0e0; /* Light text color */
+}
+
+.sidebar .new-chatt {
+    margin-top: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background: #505050; /* Slightly lighter dark background */
+    border-radius: 50px;
+    font-size: 14px;
+    color: #e0e0e0; /* Light text color */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.sidebar .new-chatt:hover {
+    background: #4b4b4b; /* Hover effect for new chat button */
+}
+
+.sidebar .recent {
+    display: flex;
+    flex-direction: column;
+    animation: fadein 1.5s;
+}
+
+.sidebar .recent-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #e0e0e0; /* Light text color */
+}
+
+.sidebar .recent-entry {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    padding: 10px;
+    padding-right: 10px;
+    border-radius: 50px;
+    color: #e0e0e0; /* Light text color */
+    cursor: pointer;
+    background-color: #3e3e3e; /* Lightly dark background for recent entries */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.sidebar .recent-entry:hover,
+.sidebar .new-chatt:focus {
+    background-color: #4b4b4b; /* Hover effect for recent entry */
+}
+
+.sidebar .bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .button-item {
+    padding-right: 10px;
+    cursor: pointer;
+    color: #e0e0e0; /* Light text color */
+}
+
+
+@media (max-width: 600px) {
+    .sidebar {
+        display: none;
+    }
+}

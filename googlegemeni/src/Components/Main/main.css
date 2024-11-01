@@ -1,0 +1,448 @@
+body {
+    background-color: #121212; /* Dark background color */
+    color: #e0e0e0; /* Light text color */
+    font-family: 'Arial', sans-serif; /* Use a sans-serif font */
+    margin: 0;
+    padding: 0;
+}
+.profile-dropdown {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    margin: 5px 0;
+}
+.ai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Required for dropdown positioning */
+}
+
+.ai p {
+    font-weight: bold; /* Make the title bold */
+    margin-right: 10px; /* Space between title and icon */
+    font-size: 18px; /* Adjust font size */
+}
+
+.ai-dropdown {
+    position: absolute; /* Position the dropdown */
+    top: 40px; /* Adjust based on your layout */
+    left: 0; /* Align it with the AI section */
+    background-color: white; /* White background for the dropdown */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow for effect */
+    z-index: 10; /* Ensure dropdown is above other elements */
+    width: 200px; /* Set a width for the dropdown */
+}
+
+.ai-dropdown div {
+    padding: 10px; /* Add padding for better spacing */
+}
+
+.current {
+    margin-bottom: 10px; /* Space between items */
+}
+
+.current span {
+    font-weight: bold; /* Bold font for version name */
+    display: block; /* Make it a block element */
+}
+
+.current p {
+    margin: 0; /* Remove default margin for the paragraph */
+    color: #666; /* Grey color for the description */
+    font-size: 12px; /* Smaller font size for description */
+}
+.ather-info-dropdown {
+    margin-top: 10px; /* Space between the version and info dropdown */
+    padding: 10px; /* Padding inside the info dropdown */
+    background-color: #f9f9f9; /* Light grey background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+#btn {
+    background-color: #4285F4; /* Google Blue */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 5px 10px; /* Padding inside the button */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+#btn:hover {
+    background-color: #357ae8; /* Darker blue on hover */
+}
+.apps-dropdown h4 {
+    margin: 0 0 10px 0; /* Margin at the bottom */
+    text-align: center; /* Center the text */
+    font-size: 14px; /* Font size */
+    color: #333; /* Color of the heading */
+}
+
+.apps-dropdown {
+    position: absolute; /* Position it relative to the parent */
+    top: 60px; /* Adjust based on your navbar height */
+    right: 20px; /* Align to the right */
+    background-color: white; /* Background color */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside the dropdown */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 10; /* Ensure it sits above other elements */
+    max-width: 300px; /* Fixed max width */
+    width: 100%; /* Full width */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    max-height: 300px; /* Limit the height to enable scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Each app icon container */
+.apps-dropdown div {
+    display: flex; /* Use flexbox for each item */
+    align-items: center; /* Center items vertically */
+    margin: 5px 0; /* Space between icons */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.2s; /* Smooth transition for hover effect */
+    justify-content: flex-start; /* Align items to the start */
+}
+
+/* Styling for app names */
+.apps-dropdown span {
+    font-size: 12px; /* Font size for app names */
+    color: #333; /* Color of app names */
+}
+
+/* Hover effect for each app icon */
+.apps-dropdown div:hover {
+    background-color: #f0f0f0; /* Light gray on hover */
+    border-radius: 5px; /* Slightly round the corners on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .apps-dropdown {
+        width: 80%; /* Full width for tablets */
+    }
+
+    .apps-dropdown div {
+        width: auto; /* Reset width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .apps-dropdown {
+        width: 100%; /* Full width for mobile devices */
+    }
+
+    .apps-dropdown div {
+        width: auto; /* Reset width for smaller screens */
+    }
+}
+
+
+.main {
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 15vh;
+    position: relative;
+}
+
+.main .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    padding: 20px;
+    color: #b0b0b0; /* Light gray for nav items */
+}
+
+.main .nav img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.main-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.main .greet {
+    margin: 50px 0px;
+    font-size: 56px;
+    color: #c4c7c5; /* Light gray for greeting */
+    font-weight: 500;
+    padding: 20px;
+}
+
+.main .greet span {
+    background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.main .card {
+    height: 200px;
+    padding: 15px;
+    background-color: #1e1e1e; /* Darker background for cards */
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for cards */
+}
+
+.main .card img {
+    width: 35px;
+    padding: 5px;
+    position: absolute;
+    background: #2b2b2b; /* Light background for images in cards */
+    border-radius: 20px;
+    bottom: 10px;
+    right: 10px;
+}
+
+.main .card p {
+    color: #e0e0e0; /* Light text for card descriptions */
+    font-size: 17px;
+}
+
+.main .card:hover {
+    background-color: #272727; /* Slightly lighter on hover */
+}
+
+.main-button {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0px 20px;
+    margin: auto;
+}
+
+.searchbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #1e1e1e; /* Dark background for search box */
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.searchbox img {
+    width: 24px;
+    cursor: pointer;
+}
+
+.searchbox input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 18px;
+    color: #e0e0e0; /* Light text color for inputs */
+}
+
+.searchbox div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.main .button-info {
+    font-size: 13px;
+    margin: 15px auto;
+    text-align: center;
+    font-weight: 300;
+}
+
+
+.result {
+    padding: 0px 5%;
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+
+.result::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+.result-title {
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.result img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.result-data {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+
+.result-data .loader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.result-data .loader hr {
+    border-radius: 4px;
+    border: none;
+    background-color: #2b2b2b; /* Darker background for loader */
+    background: linear-gradient(to right, #9ed7ff, #ffffff, #9ed7ff);
+    background-size: 800px 50px;
+    height: 20px;
+    animation: loader 3s infinite linear;
+}
+/* Modal Background */
+.image-modal {
+    position: fixed; /* Sticks the modal to the screen */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay with transparency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures the modal is above other elements */
+    padding: 20px; /* Add padding for smaller screens */
+}
+
+/* Modal Image */
+.modal-image {
+    max-width: 90vw; /* Limits image width to 90% of viewport width */
+    max-height: 90vh; /* Limits image height to 90% of viewport height */
+    border-radius: 10px; /* Adds rounded corners to the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a shadow around the image */
+    transition: transform 0.3s ease; /* Smooth zoom animation on hover */
+    object-fit: contain; /* Ensures image scales nicely without distortion */
+}
+
+/* Optional: Image zoom effect on hover */
+.modal-image:hover {
+    transform: scale(1.05); /* Slightly enlarges the image on hover */
+}
+
+/* Close modal by clicking anywhere */
+.image-modal:active {
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+
+/* For devices with a max-width of 768px (tablets) */
+@media (max-width: 768px) {
+    .modal-image {
+        max-width: 80vw; /* Reduce image size slightly on smaller screens */
+        max-height: 80vh; /* Reduce image height slightly on smaller screens */
+    }
+}
+
+/* For devices with a max-width of 480px (mobile phones) */
+@media (max-width: 480px) {
+    .modal-image {
+        max-width: 95vw; /* Increase image size for smaller mobile screens */
+        max-height: 85vh; /* Allow more height for image on smaller mobile screens */
+        border-radius: 5px; /* Reduce the border radius for small screens */
+    }
+    
+    .image-modal {
+        padding: 10px; /* Ensure modal has smaller padding on mobile */
+    }
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+@keyframes loader {
+    0% {
+        background-position: -800px 0px;
+    }
+    100% {
+        background-position: 800px 0px;
+    }
+}
+
+.result-data p {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+    gap: 10px;
+}
+
+@media (max-width: 600px) {
+    .main-button input {
+        flex: none;
+        width: 150px;
+    }
+    .main-button img {
+        width: 20px;
+    }
+    .searchbox {
+        padding: 5px 10px;
+    }
+    .searchbox div {
+        gap: 5px;
+    }
+}

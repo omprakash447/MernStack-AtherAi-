@@ -1,0 +1,120 @@
+/* signup.css */
+.parent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+body {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text color */
+    font-family: 'Outfit', sans-serif; /* Font from Google Fonts */
+}
+
+#heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#form {
+    background-color: #1e1e1e; /* Darker form background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    width: 300px; /* Fixed width for the form */
+}
+
+.inputs {
+    width: 100%; /* Full width inputs */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #333; /* Border color */
+    border-radius: 5px;
+    background-color: #2e2e2e; /* Input background */
+    color: #ffffff; /* Input text color */
+}
+
+.inputs::placeholder {
+    color: #bbb; /* Placeholder text color */
+}
+
+button {
+    width: 100%; /* Full width button */
+    padding: 10px;
+    background-color: #6200ea; /* Primary button color */
+    color: #ffffff; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition effect */
+}
+
+button:hover {
+    background-color: #3700b3; /* Darker shade on hover */
+}
+
+#paragraph {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Notification styles */
+.notification {
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: white;
+    position: relative;
+}
+
+.notification.success {
+    background-color: #4caf50; /* Green for success */
+}
+
+.notification.error {
+    background-color: #f44336; /* Red for error */
+}
+
+/* OK button inside notification */
+.ok-button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Particle styles */
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    pointer-events: none;
+    animation: float 6s ease-in-out infinite; /* Floating animation */
+}
+
+/* Float animation for particles */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
