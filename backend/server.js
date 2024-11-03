@@ -28,7 +28,7 @@ server.use(userRoutes);
 server.use(promptRoutes);
 
 // Serve static files and client-side routing
-const buildPath = path.join(__dirname, "../../googlegemeni/build");
+const buildPath = path.join(__dirname, "../googlegemeni/build");
 server.use(express.static(buildPath));
 server.get("*", (_req, res) => {
     res.sendFile(path.join(buildPath, "index.html"));
